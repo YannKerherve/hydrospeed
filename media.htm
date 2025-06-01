@@ -6,7 +6,7 @@
   <title>Équipe – Hydrospeed Team</title>
   <link rel="icon" type="image/x-icon" href="logo.jpg">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css"> <!-- Met à part le CSS si besoin -->
+  <link rel="stylesheet" href="style2.css"> <!-- Met à part le CSS si besoin -->
   <style>
     * {
       box-sizing: border-box;
@@ -354,8 +354,54 @@
 
 
 
+    .press-band {
+      position: relative;
+      width: 100%;
+      height: 60vh;
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+      transition: all 0.5s ease-in-out;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+      text-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+      cursor: pointer;
+      z-index: 1;
+    }
 
+    .press-band::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      transition: background-color 0.3s ease;
+      z-index: 2;
+    }
 
+    .press-band:hover::before {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .press-band:hover {
+      transform: scale(1.05);
+      z-index: 10;
+    }
+
+    .press-band-content {
+      position: relative;
+      z-index: 3;
+    }
+
+    @media (hover: hover) {
+      .press-band:hover {
+        height: 100vh;
+      }
+    }
 
     @media (max-width: 768px) {
       .section {
@@ -409,9 +455,35 @@
     <p style="margin: 0.5rem 0;">📧 <a href="mailto:hydrospeedteam@supmaritime.fr">hydrospeedteam@supmaritime.fr</a></p>
 
 
+
     <h2 style="font-size: 2.5rem; margin-bottom: 1rem;"></h2>
   </div>
 </section>
+
+
+
+
+
+  <div class="press-band" style="background-image: url('logo.jpeg');">
+    <div class="press-band-content">Logo</div>
+  </div>
+  <div class="press-band" style="background-image: url('design.jpeg');">
+    <div class="press-band-content">Design</div>
+  </div>
+  <div class="press-band" style="background-image: url('maquette.jpeg');">
+    <div class="press-band-content">Maquette</div>
+  </div>
+  <div class="press-band" style="background-image: url('chantier.jpeg');">
+    <div class="press-band-content">Chantier</div>
+  </div>
+  <div class="press-band" style="background-image: url('essai.jpeg');">
+    <div class="press-band-content">Essais</div>
+  </div>
+
+
+
+
+
   <section id="reseaux" style="background-color: #f5f7fa; padding: 4rem 2rem; color: #0b1c48;">
   <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
     <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Réseaux</h2>
@@ -476,139 +548,20 @@
     <p>&copy; 2025 Hydrospeed Team – ENSM Marseille. Tous droits réservés.</p>
   </div>
 </footer>
+  <script>
+    const bands = document.querySelectorAll('.band');
 
-<script>
-  const profils = {
-    yann: {
-      nom: "Yann Kerhervé",
-      role: "Président",
-      image: "yann.jpg",
-      texte: "Passionné d'électronique et de modélisation et de bricolage depuis le plus jeune âge, c'est tout naturellement que j'ai souhaité participer à ce projet ! En tant que président, je me donne à fond pour faire avancer le projet, lier les membres de l'équipe et m'assurer que tout soit prêt à temps !",
-      email: "yann.kerherve@supmaritime.fr",
-      linkedin: "https://www.linkedin.com/in/yann-kerherv%C3%A9/"
-    },
-    youn: {
-      nom: "Thomas Youn Nagles",
-      role: "Responsable voile sportive",
-      image: "coline.jpg",
-      texte: "Coline organise les entraînements et les événements sportifs de l’équipe.",
-      email: "coline.peyronel@supmaritime.fr",
-      linkedin: "https://www.linkedin.com/in/colinepeyronel/"
-    },
-    loane: {
-      nom: "Loane Meneret",
-      role: "Responsable technique",
-      image: "leo.jpg",
-      texte: "Léo est en charge de l’optimisation du prototype pour l’HydroContest.",
-      email: "leo.durand@supmaritime.fr",
-      linkedin: "https://www.linkedin.com/in/leodurand/"
-    },
-    romann: {
-      nom: "Romann Rousseau",
-      role: "Trésorière",
-      image: "emma.jpg",
-      texte: "Emma veille au bon suivi des dépenses et à la recherche de financements.",
-      email: "emma.dubois@supmaritime.fr",
-      linkedin: "https://www.linkedin.com/in/emmadubois/"
-    },
+    bands.forEach(band => {
+      band.addEventListener('mouseenter', () => {
+        band.classList.add('fullscreen');
+        document.body.style.overflow = 'hidden';
+      });
 
-    titouan: {
-      nom: "Titouan Le Glatin",
-      role: "Trésorière",
-      image: "emma.jpg",
-      texte: "Emma veille au bon suivi des dépenses et à la recherche de financements.",
-      email: "emma.dubois@supmaritime.fr",
-      linkedin: "https://www.linkedin.com/in/emmadubois/"
- },
-    clara: {
-      nom: "Clara Perray",
-      role: "Trésorière",
-      image: "emma.jpg",
-      texte: "Emma veille au bon suivi des dépenses et à la recherche de financements.",
-      email: "emma.dubois@supmaritime.fr",
-      linkedin: "https://www.linkedin.com/in/emmadubois/"
- },
-    Jules: {
-      nom: "Jules Fresangeas",
-      role: "Trésorière",
-      image: "emma.jpg",
-      texte: "Emma veille au bon suivi des dépenses et à la recherche de financements.",
-      email: "emma.dubois@supmaritime.fr",
-      linkedin: "https://www.linkedin.com/in/emmadubois/"
-},
-    fred: {
-      nom: "Frédéric Spelliers",
-      role: "Trésorière",
-      image: "emma.jpg",
-      texte: "Emma veille au bon suivi des dépenses et à la recherche de financements.",
-      email: "emma.dubois@supmaritime.fr",
-      linkedin: "https://www.linkedin.com/in/emmadubois/"
- },
-    jeanmich: {
-      nom: "Jean Michel Laborde",
-      role: "Trésorière",
-      image: "emma.jpg",
-      texte: "Emma veille au bon suivi des dépenses et à la recherche de financements.",
-      email: "emma.dubois@supmaritime.fr",
-      linkedin: "https://www.linkedin.com/in/emmadubois/"
-    }
-  };
-
-  function showProfile(key) {
-    const p = profils[key];
-    const container = document.getElementById("profile-details");
-    container.innerHTML = `
-      <div class="profil-visible">
-        <img src="${p.image}" alt="${p.nom}">
-        <div class="profil-texte">
-          <h3>${p.nom}</h3>
-          <p><strong>${p.role}</strong></p>
-          <p>${p.texte}</p>
-          <a href="mailto:${p.email}">📧 ${p.email}</a>
-          <a href="${p.linkedin}" target="_blank">🔗 LinkedIn</a>
-        </div>
-      </div>
-    `;
-    container.style.display = "block";
-  }
-
-    function showProfile2(key) {
-    const p = profils[key];
-    const container = document.getElementById("profile-details2");
-    container.innerHTML = `
-      <div class="profil-visible">
-        <img src="${p.image}" alt="${p.nom}">
-        <div class="profil-texte">
-          <h3>${p.nom}</h3>
-          <p><strong>${p.role}</strong></p>
-          <p>${p.texte}</p>
-          <a href="mailto:${p.email}">📧 ${p.email}</a>
-          <a href="${p.linkedin}" target="_blank">🔗 LinkedIn</a>
-        </div>
-      </div>
-    `;
-    container.style.display = "block";
-  }
-
-    function showProfile3(key) {
-    const p = profils[key];
-    const container = document.getElementById("profile-details3");
-    container.innerHTML = `
-      <div class="profil-visible">
-        <img src="${p.image}" alt="${p.nom}">
-        <div class="profil-texte">
-          <h3>${p.nom}</h3>
-          <p><strong>${p.role}</strong></p>
-          <p>${p.texte}</p>
-          <a href="mailto:${p.email}">📧 ${p.email}</a>
-          <a href="${p.linkedin}" target="_blank">🔗 LinkedIn</a>
-        </div>
-      </div>
-    `;
-    container.style.display = "block";
-  }
-</script>
-
-
+      band.addEventListener('mouseleave', () => {
+        band.classList.remove('fullscreen');
+        document.body.style.overflow = 'scroll';
+      });
+    });
+  </script>
 </body>
 </html>
