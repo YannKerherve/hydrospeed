@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dossier de Parrainage - Hydrospeed Team</title>
+  <link rel="stylesheet" href="style2.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+
+    /* NAVBAR */
+    nav {
+      background-color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      height: 50px;
+    }
+
+    .nav-links a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #0b1c48;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #1a4d91;
+    }
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    /* Conteneur fixe en bas à droite */
+    .fixed-buttons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 9999;
+    }
+
+    .fixed-buttons button, .fixed-buttons a {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 8px;
+      background-color: #0b1c48;
+      color: white;
+      font-size: 14px;
+      text-decoration: none;
+      text-align: center;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+
+    .contact-popup {
+      display: none;
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      background: white;
+      border: 1px solid #ccc;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      z-index: 10000;
+      font-size: 14px;
+    }
+
+    .contact-popup p {
+      margin: 5px 0;
+    }
+
+
+        /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #0b1c48;
+      color: white;
+      margin-top: 2rem;
+    }
+    .footer {
+  background-color: #0b1c48;
+  color: white;
+  padding: 3rem 1rem 1rem;
+  font-family: sans-serif;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-logo {
+  width: 120px;
+}
+
+.search-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.search-form input {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+}
+
+.search-form button {
+  background-color: white;
+  border: none;
+  color: #0b1c48;
+  padding: 0.5rem 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.footer-column h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.social-icons a {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 0.3rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.footer-links li a:hover,
+.social-icons a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  border-top: 1px solid #ccc;
+  padding-top: 1rem;
+  font-size: 0.9rem;
+  color: #ddd;
+}
+  </style>
+
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.htm"><img src="logo.jpg" alt="Logo Hydrospeed" class="logo"></a>
+    <div class="nav-links">
+      <a href="equipe.htm">Équipe</a>
+      <a href="projet.htm">Projet</a>
+      <a href="actualites.htm">Actualités</a>
+      <a href="partenaires.htm">Partenaires</a>
+      <a href="media.htm">Média</a>
+      <a href="contact.htm">Contact</a>
+    </div>
+  </nav>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#equipe">L'association</a></li>
+        <li><a href="#epreuves">Le Concours</a></li>
+        <li><a href="#prototype">Le Bateau</a></li>
+        <li><a href="#ensm">L'ENSM</a></li>
+        <li><a href="#objectifs">Objectifs</a></li>
+        <li><a href="#planning">Calendrier</a></li>
+        <li><a href="#soutenir">Pourquoi nous soutenir</a></li>
+        <li><a href="#budget">Budget</a></li>
+        <li><a href="#exposition">Exposition</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <section class="hero">
+      <div>
+        <h1>Ensemble, allions vitesse et écologie</h1>
+        <p>pour remporter l’Hydrocontest 2026 !</p>
+        <a href="#equipe" class="cta-button">Découvrir notre dossier de parrainage !</a>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section id="equipe" class="section">
+      <h2>Qui sommes-nous ?</h2>
+      <p>Hydrospeed Team est une association loi 1901 d'étudiants de l'ENSM Marseille. Elle réunit 7 élèves et 2 professeurs autour du projet Hydrocontest 2026. Ensemble, nous innovons pour un avenir maritime durable.</p>
+      <img src="https://source.unsplash.com/800x500/?team,students" alt="Équipe d'étudiants" class="responsive" />
+    </section>
+
+    <section id="epreuves" class="section dark">
+      <h2>Les Épreuves de l’Hydrocontest</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Épreuve d’agilité</h3>
+          <p>0.5 MN | 20 min max | 40 kg<br>Parcourir la plus petite distance possible.</p>
+        </div>
+        <div class="card">
+          <h3>Transport de marchandises</h3>
+          <p>0.5 MN | 100 kg puis 40 kg | 15 min<br>Consommer le moins d'énergie possible.</p>
+        </div>
+        <div class="card">
+          <h3>Course de vitesse</h3>
+          <p>1h | 40 kg | Batterie 30-35 Ah<br>Parcourir la plus grande distance.</p>
+        </div>
+        <div class="card">
+          <h3>Présentation orale</h3>
+          <p>Exposé sur l’éco-conception du prototype avec contraintes matériaux.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="prototype" class="section">
+      <h2>Notre prototype</h2>
+      <p>Conçu en fibre de lin dans un chantier à Martigues, notre bateau utilise une carène « perse vague » avec un bulbe activable. Il incarne performance, durabilité et respect de l’environnement.</p>
+      <img src="https://source.unsplash.com/800x500/?boat,construction" alt="Prototype en construction" class="responsive" />
+    </section>
+
+    <section id="ensm" class="section dark">
+      <h2>L’ENSM</h2>
+      <p>Créée en 1571, l’ENSM forme les officiers de la marine marchande. Reconnue mondialement, elle délivre des diplômes d'ingénieurs et propose des formations de pointe (glaces, gaz, propulsion…). Nous sommes tous étudiants sur le site de Marseille pour devenir Officiers Polyvalents.</p>
+      <img src="https://source.unsplash.com/800x500/?ship,academy" alt="École ENSM" class="responsive" />
+    </section>
+
+    <section id="objectifs" class="section">
+      <h2>Objectifs stratégiques</h2>
+      <ul>
+        <li>Accroître la notoriété de l'ENSM et des métiers maritimes</li>
+        <li>Répondre à la décarbonation du secteur</li>
+        <li>Favoriser la recherche appliquée</li>
+        <li>Renforcer l'intégration territoriale</li>
+        <li>Monter en compétences sur les enjeux du maritime</li>
+        <li>Conduire la transition énergétique</li>
+      </ul>
+    </section>
+
+    <section id="planning" class="section dark">
+      <h2>Calendrier du projet</h2>
+      <ol>
+        <li>Création de l’association</li>
+        <li>Modélisation et calculs</li>
+        <li>Recherche de partenaires</li>
+        <li>Réalisation coque et foils</li>
+        <li>Conception électronique, voiles, hélice</li>
+        <li>Montage final</li>
+        <li>Essais en mer</li>
+        <li>Vidéo de présentation</li>
+        <li>Concours 1er semestre 2026</li>
+      </ol>
+    </section>
+
+    <section id="soutenir" class="section">
+      <h2>Pourquoi nous soutenir ?</h2>
+      <ul>
+        <li>Visibilité sur notre bateau, nos vêtements, nos présentations</li>
+        <li>Valorisation de votre image dans la transition écologique</li>
+        <li>Association à la recherche de technologies vertes</li>
+        <li>Rapprochement avec le milieu étudiant ENSM</li>
+        <li>Image forte du milieu maritime : engagement et passion</li>
+      </ul>
+      <img src="https://source.unsplash.com/800x500/?sponsorship,team" alt="Partenariat et visibilité" class="responsive" />
+    </section>
+
+    <section id="budget" class="section dark">
+      <h2>Budget prévisionnel</h2>
+      <p>Total estimé : <strong>16 525 €</strong></p>
+      <p>Les sponsors peuvent contribuer par des dons, services, matériels ou mécénat.</p>
+      <p>Une grande partie du projet a été financée par les pilotes de Marseille et l'école. Cependant, il reste beaucoup à faire ! Le graphique suivant montre en rouge ce qui reste à financer. Une grosse partie est attribuée au moteur, indispensable pour rester compétitifs.</p>
+      <div class="iframe-container">
+        <iframe width="765" height="371" seamless frameborder="0" scrolling="no"
+          src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRIOfamtGiYCDNXzr1OFSbamdD7ovwRMMb-AkaBc163jiTkr0aD8yNXwuWw9ITIH2_h3bQak8sfq4Mb/pubchart?oid=680628397&amp;format=interactive">
+        </iframe>
+      </div>
+    </section>
+
+    <section id="exposition" class="section">
+      <h2>Visibilité et exposition</h2>
+      <ul>
+        <li>Village de course ouvert au public</li>
+        <li>Stands et animations pédagogiques</li>
+        <li>Mention dans la presse et sur les réseaux sociaux</li>
+        <li>Parrain : Plastic Odyssey, Simon Bernard</li>
+        <li>Marraine : MN Process, Morgane Suquart (JO)</li>
+        <li>Partenaires floqués sur tee-shirts, bateau, documents oraux</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="section dark">
+      <h2>Contact</h2>
+       <p>Pour toute demande, n'hésitez pas à nous contacter !</p>
+      <p>Email : <a href="mailto:hydrospeedteam@supmaritime.fr">hydrospeedteam@supmaritime.fr</a></p>
+      <p><strong>Yann Kerhervé</strong> – Président : 07 85 30 86 91</p>
+    </section>
+
+    <div class="fixed-buttons">
+  <a href="https://tonlienversledossier.com/dossier.pdf" target="_blank">📄 Imprimer le dossier</a>
+  <button onclick="toggleContact()">📞 Contactez-nous</button>
+</div>
+
+<!-- Popup de contact -->
+<div class="contact-popup" id="contactPopup">
+  <p><strong>📞 Yann Kerhervé</strong></p>
+  <p>Tél : <a href="tel:+33785308691">07 85 30 86 91</a></p>
+  <p>Email : <a href="mailto:yann.kerherve@supmaritime.fr">yann.kerherve@supmaritime.fr</a></p>
+</div>
+
+
+<script>
+  function toggleContact() {
+    const popup = document.getElementById('contactPopup');
+    popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+  </main>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Colonne 1 : Logo -->
+    <div class="footer-column">
+      <img src="logoblanc.png" alt="Hydrospeed Team Logo" class="footer-logo">
+    </div>
+
+    <!-- Colonne 2 : Recherche -->
+    <div class="footer-column">
+      <h3>Rechercher</h3>
+      <form class="search-form">
+        <input type="text" placeholder="Recherche..." name="search">
+        <button type="submit">🔍</button>
+      </form>
+    </div>
+
+    <!-- Colonne 3 : Réseaux sociaux -->
+    <div class="footer-column">
+      <h3>Suivez-nous</h3>
+      <div class="social-icons">
+        <a href="https://www.instagram.com" target="_blank">📷 Instagram</a><br>
+        <a href="https://www.linkedin.com" target="_blank">🔗 LinkedIn</a><br>
+      </div>
+    </div>
+
+    <!-- Colonne 4 : Navigation -->
+    <div class="footer-column">
+      <h3>Navigation</h3>
+      <ul class="footer-links">
+        <li><a href="#equipe">Équipe</a></li>
+        <li><a href="#projet">Projet</a></li>
+        <li><a href="#actus">Actualités</a></li>
+        <li><a href="#media">Média</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Hydrospeed Team – ENSM Marseille. Tous droits réservés.</p>
+  </div>
+</footer>
+
+
+</body>
+</html>
