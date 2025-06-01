@@ -2,148 +2,123 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Construction du Bateau</title>
+  <title>Construction du Prototype</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       background: #f5f7fa;
       margin: 0;
-      padding: 40px;
+      padding: 20px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     h2 {
       text-align: center;
       color: #0b1c48;
+      font-size: 20px;
     }
 
     .timeline {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
       position: relative;
-      margin-top: 50px;
-      padding: 30px;
       background: white;
       border: 4px solid #0b1c48;
       border-radius: 20px;
-      overflow-x: auto;
-      min-height: 180px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
     }
 
     .step {
-      text-align: center;
       position: relative;
-      flex: 1;
-      min-width: 180px;
-      padding: 10px;
+      padding-left: 40px;
     }
 
     .circle {
-      width: 22px;
-      height: 22px;
+      width: 20px;
+      height: 20px;
       background-color: #ccc;
       border-radius: 50%;
-      margin: 0 auto 10px;
-      position: relative;
-      z-index: 2;
-      border: 2px solid #fff;
-    }
-
-    .step.active .circle {
-      background-color: #0b1c48;
+      border: 2px solid white;
+      position: absolute;
+      left: 0;
+      top: 5px;
     }
 
     .step.complete .circle {
       background-color: #4caf50;
     }
 
-    .label {
-      font-size: 15px;
-      margin-top: 5px;
-    }
-
-    .tooltip {
-      visibility: hidden;
+    .step.active .circle {
       background-color: #0b1c48;
-      color: #fff;
-      text-align: center;
-      padding: 8px 12px;
-      border-radius: 6px;
-      position: absolute;
-      bottom: 40px;
-      left: 50%;
-      transform: translateX(-50%);
-      max-width: 240px;
-      z-index: 3;
-      font-size: 14px;
-      white-space: normal;
     }
 
-    .step:hover .tooltip {
-      visibility: visible;
+    .label {
+      font-weight: bold;
+      color: #0b1c48;
+      margin-bottom: 4px;
+    }
+
+    .text {
+      background: #0b1c48;
+      color: white;
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 14px;
     }
 
     .line {
       position: absolute;
-      top: 30px;
-      left: 0;
-      right: 0;
-      height: 4px;
+      left: 9px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
       background-color: #ccc;
-      z-index: 1;
-    }
-
-    .progress {
-      position: absolute;
-      top: 30px;
-      left: 0;
-      height: 4px;
-      background-color: #4caf50;
-      z-index: 2;
-      width: 62%; /* Avancement réel au 1er juin 2025 */
+      z-index: 0;
     }
   </style>
 </head>
 <body>
-  <h2>Construction du Prototype – de novemebre 2024 à mai 2026</h2>
+  <h2>Construction du Prototype<br>nov. 2024 – mai 2026</h2>
   <div class="timeline">
     <div class="line"></div>
-    <div class="progress"></div>
 
     <div class="step complete">
       <div class="circle"></div>
-      <div class="tooltip">Novembre 2024 : Design du prototype</div>
       <div class="label">Novembre 2024</div>
+      <div class="text">Création de l'association</div>
     </div>
 
     <div class="step complete">
       <div class="circle"></div>
-      <div class="tooltip">1er avril 2025 : finalisation de la conception et début du chantier</div>
-      <div class="label">Avril 2025</div>
+      <div class="label">1er avril 2025</div>
+      <div class="text">Finalisation de la phase de conception et début du chantier</div>
     </div>
 
     <div class="step complete">
       <div class="circle"></div>
-      <div class="tooltip">15 mai 2025 : finalisation de la coque</div>
-      <div class="label">Mai 2025</div>
+      <div class="label">15 mai 2025</div>
+      <div class="text">Finalisation de la coque</div>
     </div>
 
     <div class="step active">
       <div class="circle"></div>
-      <div class="tooltip">15 juin 2025 : insertion du moteur et du safran (en cours)</div>
-      <div class="label">Juin 2025</div>
+      <div class="label">15 juin 2025</div>
+      <div class="text">Insertion du moteur et du safran (en cours)</div>
     </div>
 
     <div class="step">
       <div class="circle"></div>
-      <div class="tooltip">1er juillet 2025 : essais en mer, améliorations et vidéo</div>
-      <div class="label">Juillet 2025</div>
+      <div class="label">1er juillet 2025</div>
+      <div class="text">Essais en mer, améliorations et vidéo</div>
     </div>
 
     <div class="step">
       <div class="circle"></div>
-      <div class="tooltip">1er mai 2026 : compétition</div>
-      <div class="label">Mai 2026</div>
+      <div class="label">1er mai 2026</div>
+      <div class="text">Compétition !</div>
     </div>
   </div>
 </body>
