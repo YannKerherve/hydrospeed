@@ -354,48 +354,50 @@
 
 
 
-    .press-band {
-      position: relative;
-      width: 100%;
-      height: 60vh;
-      background-size: cover;
-      background-position: center;
-      overflow: hidden;
-      transition: all 0.5s ease-in-out;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 2rem;
-      font-weight: bold;
-      text-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
-      cursor: pointer;
-      z-index: 1;
-    }
+  a.press-band {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  text-decoration: none;
+  color: white;
+}
 
-    .press-band::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      transition: background-color 0.3s ease;
-      z-index: 2;
-    }
+a.press-band::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease;
+  z-index: 1;
+}
 
-    .press-band:hover::before {
-      background-color: rgba(0, 0, 0, 0.2);
-    }
+a.press-band:hover::before {
+  background-color: rgba(0, 0, 0, 0.2);
+}
 
-    .press-band:hover {
-      transform: scale(1.05);
-      z-index: 10;
-    }
+a.press-band:hover {
+  transform: scale(1.02);
+  z-index: 10;
+}
 
-    .press-band-content {
-      position: relative;
-      z-index: 3;
-    }
+.press-band-content {
+  position: relative;
+  z-index: 2;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
 
     @media (hover: hover) {
       .press-band:hover {
@@ -465,23 +467,18 @@
 
 
 
-  <div class="press-band" style="background-image: url('stand.png');">
+  <a href="https://supmaritimefr-my.sharepoint.com/:f:/g/personal/yann_kerherve_supmaritime_fr/EvnHzgW5hi9EseLxlI00iTsBwh1uQON9R-Pse5C0FeYqrg" class="press-band" style="background-image: url('stand.png');">
     <div class="press-band-content">Logo
-    <br><a href="https://supmaritimefr-my.sharepoint.com/:f:/g/personal/yann_kerherve_supmaritime_fr/EvnHzgW5hi9EseLxlI00iTsBwh1uQON9R-Pse5C0FeYqrg" target="_blank" class="press-button">Télécharger</a>
     </div>
-</div>
-  <div class="press-band" style="background-image: url('design.jpeg');">
-    <div class="press-band-content">Design<br><a href="https://supmaritimefr-my.sharepoint.com/:f:/g/personal/yann_kerherve_supmaritime_fr/EvnHzgW5hi9EseLxlI00iTsBwh1uQON9R-Pse5C0FeYqrg" target="_blank" class="press-button">Télécharger</a></div>
-</div>
-  <div class="press-band" style="background-image: url('maquette.jpeg');">
-    <div class="press-band-content">Maquette<br><a href="https://supmaritimefr-my.sharepoint.com/:f:/g/personal/yann_kerherve_supmaritime_fr/EvnHzgW5hi9EseLxlI00iTsBwh1uQON9R-Pse5C0FeYqrg" target="_blank" class="press-button">Télécharger</a></div>
-</div>
-  <div class="press-band" style="background-image: url('chantier.jpeg');">
-    <div class="press-band-content">Chantier<br><a href="https://supmaritimefr-my.sharepoint.com/:f:/g/personal/yann_kerherve_supmaritime_fr/EvnHzgW5hi9EseLxlI00iTsBwh1uQON9R-Pse5C0FeYqrg" target="_blank" class="press-button">Télécharger</a></div>
-</div>
-  <div class="press-band" style="background-image: url('essai.jpeg');">
-    <div class="press-band-content">Essais<br><a href="https://supmaritimefr-my.sharepoint.com/:f:/g/personal/yann_kerherve_supmaritime_fr/EvnHzgW5hi9EseLxlI00iTsBwh1uQON9R-Pse5C0FeYqrg" target="_blank" class="press-button">Télécharger</a></div>
-</div>
+</a>
+  <a href="https://supmaritimefr-my.sharepoint.com/:f:/g/personal/yann_kerherve_supmaritime_fr/EvnHzgW5hi9EseLxlI00iTsBwh1uQON9R-Pse5C0FeYqrg" class="press-band" style="background-image: url('design.jpeg');">
+    <div class="press-band-content">Design</div></a>
+  <a href="https://supmaritimefr-my.sharepoint.com/:f:/g/personal/yann_kerherve_supmaritime_fr/EvnHzgW5hi9EseLxlI00iTsBwh1uQON9R-Pse5C0FeYqrg" class="press-band" style="background-image: url('maquette.jpeg');">
+    <div class="press-band-content">Maquette</div></a>
+  <a href="https://supmaritimefr-my.sharepoint.com/:f:/g/personal/yann_kerherve_supmaritime_fr/EvnHzgW5hi9EseLxlI00iTsBwh1uQON9R-Pse5C0FeYqrg" class="press-band" style="background-image: url('chantier.jpeg');">
+    <div class="press-band-content">Chantier</div></a>
+  <a href="https://supmaritimefr-my.sharepoint.com/:f:/g/personal/yann_kerherve_supmaritime_fr/EvnHzgW5hi9EseLxlI00iTsBwh1uQON9R-Pse5C0FeYqrg" class="press-band" style="background-image: url('essai.jpeg');">
+    <div class="press-band-content">Essais</div></a>
 
 
 
