@@ -49,6 +49,37 @@
     .nav-links a:hover {
       color: #1a4d91;
     }
+    .hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+
+  .nav-links a {
+    margin: 1rem 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
 
     /* HERO */
     .hero {
@@ -371,6 +402,8 @@
   <!-- NAVIGATION -->
   <nav>
     <a href="index.htm"><img src="logo.jpg" alt="Logo Hydrospeed" class="logo"></a>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
     <div class="nav-links">
       <a href="equipe.htm">Équipe</a>
       <a href="projet.htm">Projet</a>
@@ -583,8 +616,13 @@
     `;
     container.style.display = "block";
   }
+
+    function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('active');
+  }
 </script>
 
 
 </body>
 </html>
+
