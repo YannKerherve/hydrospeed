@@ -1,0 +1,52 @@
+/* Structure */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f5f5;
+  color: #0b1c48;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
+/* Header */
+.site-header {
+  background-color: white;
+  border-bottom: 2px solid #0b1c48;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 60px;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar .nav-links li a {
+  text-decoration: none;
+  color: #0b1c48;
+  font-weight: bold;
+}
+
+.navbar .nav-links li a:hover {
+  text-decoration: underline;
+}
+
+/* Main */
+.page-content {
+  padding: 2rem;
+}
+
+/* Footer (déjà vu plus haut, à inclure au même endroit que .footer) */
