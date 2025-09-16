@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -12,14 +12,12 @@
       margin: 0;
       padding: 0;
     }
-
     body {
       font-family: 'Montserrat', sans-serif;
       color: #0b1c48;
       background-color: #fff;
       line-height: 1.6;
     }
-
     /* NAVBAR */
     nav {
       background-color: #fff;
@@ -32,11 +30,9 @@
       top: 0;
       z-index: 1000;
     }
-
     .logo {
       height: 50px;
     }
-
     .nav-links a {
       margin-left: 1.5rem;
       text-decoration: none;
@@ -44,42 +40,35 @@
       font-weight: 600;
       transition: color 0.3s;
     }
-
     .nav-links a:hover {
       color: #1a4d91;
     }
     .hamburger {
-  display: none;
-  font-size: 2rem;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: white;
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    padding: 1rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  }
-
-  .nav-links a {
-    margin: 1rem 0;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .hamburger {
-    display: block;
-  }
-}
-
-
+      display: none;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        padding: 1rem;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      }
+      .nav-links a {
+        margin: 1rem 0;
+      }
+      .nav-links.active {
+        display: flex;
+      }
+      .hamburger {
+        display: block;
+      }
+    }
     /* HERO */
     .hero {
       height: 90vh;
@@ -90,7 +79,6 @@
       text-align: center;
       color: white;
     }
-
     .background-video {
       position: absolute;
       top: 0;
@@ -100,7 +88,6 @@
       object-fit: cover;
       z-index: 0;
     }
-
     .hero-overlay {
       position: relative;
       z-index: 1;
@@ -109,15 +96,12 @@
       padding: 1rem 2rem;
       border-radius: 10px;
     }
-
     .hero h1 {
       font-size: 3rem;
-
       padding: 1rem 2rem;
       border-radius: 10px;
     }
-
-    /* SECTION ALTERNÉE */
+    /* SECTION ALTERNATING */
     .section {
       display: flex;
       align-items: center;
@@ -127,30 +111,24 @@
       margin: auto;
       flex-wrap: wrap;
     }
-
     .section img {
       flex: 1 1 40%;
       max-width: 100%;
       border-radius: 12px;
     }
-
     .section .text {
       flex: 1 1 50%;
     }
-
     .section:nth-child(even) {
       flex-direction: row-reverse;
     }
-
     .text h2 {
       font-size: 2rem;
       margin-bottom: 1rem;
     }
-
     .text p {
       font-size: 1rem;
     }
-
     /* SOCIAL BUTTONS */
     .socials {
       display: flex;
@@ -158,7 +136,6 @@
       gap: 1.5rem;
       margin: 3rem 0;
     }
-
     .socials a {
       text-decoration: none;
       background-color: #0b1c48;
@@ -167,11 +144,9 @@
       border-radius: 30px;
       transition: background 0.3s;
     }
-
     .socials a:hover {
       background-color: #1a4d91;
     }
-
     /* FOOTER */
     footer {
       text-align: center;
@@ -181,85 +156,72 @@
       margin-top: 2rem;
     }
     .footer {
-  background-color: #0b1c48;
-  color: white;
-  padding: 3rem 1rem 1rem;
-  font-family: sans-serif;
-}
-
-.footer-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.footer-logo {
-  width: 120px;
-}
-
-.search-form {
-  display: flex;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-.search-form input {
-  flex: 1;
-  padding: 0.5rem;
-  border-radius: 5px;
-  border: none;
-}
-
-.search-form button {
-  background-color: white;
-  border: none;
-  color: #0b1c48;
-  padding: 0.5rem 0.8rem;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.footer-column h3 {
-  margin-bottom: 0.5rem;
-  font-size: 1.1rem;
-}
-
-.social-icons a {
-  color: white;
-  text-decoration: none;
-  display: inline-block;
-  margin-bottom: 0.3rem;
-}
-
-.footer-links {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-links li a {
-  color: white;
-  text-decoration: none;
-  display: block;
-  margin-bottom: 0.3rem;
-}
-
-.footer-links li a:hover,
-.social-icons a:hover {
-  text-decoration: underline;
-}
-
-.footer-bottom {
-  text-align: center;
-  margin-top: 2rem;
-  border-top: 1px solid #ccc;
-  padding-top: 1rem;
-  font-size: 0.9rem;
-  color: #ddd;
-}
-
-
+      background-color: #0b1c48;
+      color: white;
+      padding: 3rem 1rem 1rem;
+      font-family: sans-serif;
+    }
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .footer-logo {
+      width: 120px;
+    }
+    .search-form {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+    .search-form input {
+      flex: 1;
+      padding: 0.5rem;
+      border-radius: 5px;
+      border: none;
+    }
+    .search-form button {
+      background-color: white;
+      border: none;
+      color: #0b1c48;
+      padding: 0.5rem 0.8rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .footer-column h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+    .social-icons a {
+      color: white;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 0.3rem;
+    }
+    .footer-links {
+      list-style: none;
+      padding: 0;
+    }
+    .footer-links li a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+    .footer-links li a:hover,
+    .social-icons a:hover {
+      text-decoration: underline;
+    }
+    .footer-bottom {
+      text-align: center;
+      margin-top: 2rem;
+      border-top: 1px solid #ccc;
+      padding-top: 1rem;
+      font-size: 0.9rem;
+      color: #ddd;
+    }
     @media (max-width: 768px) {
       .section {
         flex-direction: column !important;
@@ -269,129 +231,102 @@
   </style>
 </head>
 <body>
-
-  <!-- NAVIGATION -->
   <nav>
-    <img src="logo.jpg" alt="Logo Hydrospeed" class="logo">
+    <img src="logo.jpg" alt="Hydrospeed Logo" class="logo">
     <div class="hamburger" onclick="toggleMenu()">☰</div>
     <div class="nav-links">
-      <a href="equipe.htm">Équipe</a>
-      <a href="projet.htm">Projet</a>
-      <a href="actualites.htm">Actualités</a>
-      <a href="partenaires.htm">Partenaires</a>
-      <a href="media.htm">Média</a>
+      <a href="equipe.htm">Team</a>
+      <a href="projet.htm">Project</a>
+      <a href="actualites.htm">News</a>
+      <a href="partenaires.htm">Partners</a>
+      <a href="media.htm">Media</a>
       <a href="contact.htm">Contact</a>
-      <a href="dossierparrainage.html"><strong>Devenir partenaire</strong></a>
+      <a href="dossierparrainage.html"><strong>Become a partner</strong></a>
     </div>
   </nav>
-
-  <!-- HERO SECTION -->
-    <section class="hero">
-      <video autoplay muted loop playsinline class="background-video">
-        <source src="vid2.mp4" type="video/mp4">
-        Votre navigateur ne supporte pas la vidéo HTML5.
-      </video>
-      <div class="hero-overlay">
-        <h1>Hydrospeed Team – ENSM Marseille</h1>
-      </div>
-    </section>
-
-  <!-- SECTIONS ALTERNÉES -->
+  <section class="hero">
+    <video autoplay muted loop playsinline class="background-video">
+      <source src="vid2.mp4" type="video/mp4">
+      Your browser does not support the HTML5 video.
+    </video>
+    <div class="hero-overlay">
+      <h1>Hydrospeed Team – ENSM Marseille</h1>
+    </div>
+  </section>
   <section class="section" id="equipe">
-    <img src="equipe.jpeg" width="45%"  alt="Équipe">
+    <img src="equipe.jpeg" width="45%" alt="Team">
     <div class="text">
-      <h2>Notre Projet</h2>
-      <p>Cette année, notre projet est de remporter le concours international Hydrocontest avec notre bateau très basse consommation éco-conçu.</p>
+      <h2>Our Project</h2>
+      <p>This year, our project is to win the international Hydrocontest competition with our very low-consumption, eco-designed boat.</p>
       <div class="socials">
         <a href="https://www.linkedin.com/in/hydrospeed-team/" target="_blank">LinkedIn</a>
         <a href="https://www.instagram.com/hydrospeed_team/" target="_blank">Instagram</a>
       </div>
     </div>
   </section>
-
   <section class="section" id="projet">
-    <img src="inventor.jpg" width="45%" alt="Projet">
+    <img src="inventor.jpg" width="45%" alt="Project">
     <div class="text">
-      <h2>Un défi technologique</h2>
-      <p>Notre prototype de 2.5 mètres intègre des solutions de propulsion durables et un design optimisé pour la performance. Chaque élément est pensé pour l’avenir du maritime.</p>
+      <h2>A technological challenge</h2>
+      <p>Our 2.5-meter prototype integrates sustainable propulsion solutions and a design optimized for performance. Every element is conceived for the future of the maritime industry.</p>
     </div>
   </section>
-
   <section class="section" id="projet">
-    <img src="hydrocontest.jpg" width="45%" alt="Projet">
+    <img src="hydrocontest.jpg" width="45%" alt="Project">
     <div class="text">
-      <h2>Le concours</h2>
-      <p>Hydrocontest By ENSM est un concours international étudiant de réalisation de prototype de navires performants écologiquement parlant. Ces navires sont mis en compétition face à différents parcours (course d'économie d'énergie, manœuvrabilité, vitesse avec énergie limitée)</p>
+      <h2>The competition</h2>
+      <p>Hydrocontest By ENSM is an international student competition for the creation of prototypes of environmentally friendly, high-performance ships. These ships compete against each other in various courses (energy-saving race, maneuverability, speed with limited energy).</p>
     </div>
   </section>
-
   <section class="section" id="projet">
-    <img src="bateau.jpeg" width="45%" alt="Projet">
+    <img src="bateau.jpeg" width="45%" alt="Project">
     <div class="text">
-      <h2>Nos solutions</h2>
-      <p>Notre coque est particulièrement adaptée pour minimiser la consommation du moteur électrique de propulsion. Avec sa forme "Perce-Vague", la vague d'étrave doit être limitée au maximum.</p>
+      <h2>Our solutions</h2>
+      <p>Our hull is particularly adapted to minimize the consumption of the electric propulsion motor. With its "Wave-Piercing" shape, the bow wave should be limited as much as possible.</p>
     </div>
   </section>
-
-
-  <!-- SOCIALS -->
   <div class="socials">
     <a href="https://www.instagram.com/hydrospeed_team/" target="_blank">Instagram</a>
     <a href="https://www.linkedin.com/in/hydrospeed-team/" target="_blank">LinkedIn</a>
   </div>
-
-  <!-- FOOTER -->
-<footer class="footer">
-  <div class="footer-container">
-
-    <!-- Colonne 1 : Logo -->
-    <div class="footer-column">
-      <img src="logoblanc.png" alt="Hydrospeed Team Logo" class="footer-logo">
-    </div>
-
-    <!-- Colonne 2 : Recherche -->
-    <div class="footer-column">
-      <h3>Rechercher</h3>
-      <form class="search-form">
-        <input type="text" placeholder="Recherche..." name="search">
-        <button type="submit">🔍</button>
-      </form>
-    </div>
-
-    <!-- Colonne 3 : Réseaux sociaux -->
-    <div class="footer-column">
-      <h3>Suivez-nous</h3>
-      <div class="social-icons">
-        <a href="https://www.instagram.com/hydrospeed_team/" target="_blank">📷 Instagram</a><br>
-        <a href="https://www.linkedin.com/in/hydrospeed-team/" target="_blank">🔗 LinkedIn</a><br>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <img src="logoblanc.png" alt="Hydrospeed Team Logo" class="footer-logo">
+      </div>
+      <div class="footer-column">
+        <h3>Search</h3>
+        <form class="search-form">
+          <input type="text" placeholder="Search..." name="search">
+          <button type="submit">🔍</button>
+        </form>
+      </div>
+      <div class="footer-column">
+        <h3>Follow us</h3>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/hydrospeed_team/" target="_blank">📷 Instagram</a><br>
+          <a href="https://www.linkedin.com/in/hydrospeed-team/" target="_blank">🔗 LinkedIn</a><br>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h3>Navigation</h3>
+        <ul class="footer-links">
+          <li><a href="#equipe">Team</a></li>
+          <li><a href="#projet">Project</a></li>
+          <li><a href="#actus">News</a></li>
+          <li><a href="#media">Media</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </div>
     </div>
-
-    <!-- Colonne 4 : Navigation -->
-    <div class="footer-column">
-      <h3>Navigation</h3>
-      <ul class="footer-links">
-        <li><a href="#equipe">Équipe</a></li>
-        <li><a href="#projet">Projet</a></li>
-        <li><a href="#actus">Actualités</a></li>
-        <li><a href="#media">Média</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Hydrospeed Team – ENSM Marseille. All rights reserved.</p>
     </div>
-
-  </div>
-
-  <div class="footer-bottom">
-    <p>&copy; 2025 Hydrospeed Team – ENSM Marseille. Tous droits réservés.</p>
-  </div>
-</footer>
-<script>
-  function toggleMenu() {
-    document.querySelector('.nav-links').classList.toggle('active');
-  }
-</script>
-
-
+  </footer>
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
-
