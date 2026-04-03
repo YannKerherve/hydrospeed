@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Média – Hydrospeed Team</title>
   <link rel="icon" type="image/x-icon" href="logo.jpg">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style2.css"> <!-- Met à part le CSS si besoin -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
@@ -49,399 +48,526 @@
     .nav-links a:hover {
       color: #1a4d91;
     }
-.hamburger {
-  display: none;
-  font-size: 2rem;
-  cursor: pointer;
-}
 
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: white;
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    padding: 1rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  }
+    .hamburger {
+      display: none;
+      font-size: 2rem;
+      cursor: pointer;
+    }
 
-  .nav-links a {
-    margin: 1rem 0;
-  }
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        padding: 1rem;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      }
 
-  .nav-links.active {
-    display: flex;
-  }
+      .nav-links a {
+        margin: 1rem 0;
+      }
 
-  .hamburger {
-    display: block;
-  }
-}
+      .nav-links.active {
+        display: flex;
+      }
 
-    /* HERO */
-    .hero {
-      height: 90vh;
-      background: url('bandeau.mp4') center/cover no-repeat;
+      .hamburger {
+        display: block;
+      }
+    }
+
+    /* HERO BANNER */
+    .page-banner {
+      position: relative;
+      height: 50vh;
+      background-image: url('equipage.jpeg');
+      background-size: cover;
+      background-position: center;
       display: flex;
       align-items: center;
       justify-content: center;
-      text-align: center;
       color: white;
     }
 
-    .background-video {
+    .page-banner::before {
+      content: '';
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      z-index: 0;
-    }
-
-    .hero-overlay {
-      position: relative;
+      background: linear-gradient(135deg, rgba(11, 28, 72, 0.7), rgba(26, 77, 145, 0.5));
       z-index: 1;
-      color: white;
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 1rem 2rem;
-      border-radius: 10px;
     }
 
-    .hero h1 {
-      font-size: 3rem;
-
-      padding: 1rem 2rem;
-      border-radius: 10px;
+    .banner-text {
+      position: relative;
+      z-index: 2;
+      text-align: center;
     }
 
-    /* SECTION ALTERNÉE */
-    .section {
-      display: flex;
-      align-items: center;
-      padding: 4rem 2rem;
-      gap: 2rem;
+    .banner-text h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+      margin-bottom: 0.5rem;
+    }
+
+    .banner-text p {
+      font-size: 1.2rem;
+      font-weight: 400;
+      opacity: 0.95;
+    }
+
+    /* INTRO SECTION */
+    .intro-section {
       max-width: 1200px;
-      margin: auto;
-      flex-wrap: wrap;
+      margin: 5rem auto;
+      padding: 0 2rem;
+      text-align: center;
     }
 
-    .section img {
-      flex: 1 1 40%;
-      max-width: 100%;
+    .intro-section h2 {
+      font-size: 2.5rem;
+      color: #0b1c48;
+      margin-bottom: 1.5rem;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .intro-card {
+      background: #f5f7fa;
+      padding: 2rem;
       border-radius: 12px;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
-    .section .text {
-      flex: 1 1 50%;
+    .intro-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(11, 28, 72, 0.15);
     }
 
-    .section:nth-child(even) {
-      flex-direction: row-reverse;
+    .intro-card h3 {
+      color: #1a4d91;
+      font-size: 1.3rem;
+      margin-bottom: 0.8rem;
     }
 
-    .text h2 {
-      font-size: 2rem;
+    .intro-card p {
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    /* DOSSIER DE PRESSE SECTION */
+    .press-kit-section {
+      background: linear-gradient(135deg, #0b1c48 0%, #1a4d91 100%);
+      padding: 5rem 2rem;
+      color: white;
+    }
+
+    .press-kit-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .press-kit-left h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .download-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 2rem;
+      border-radius: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .download-card h3 {
+      font-size: 1.5rem;
       margin-bottom: 1rem;
     }
 
-    .text p {
-      font-size: 1rem;
+    .download-card p {
+      margin-bottom: 1.5rem;
+      opacity: 0.9;
     }
 
-    /* SOCIAL BUTTONS */
-    .socials {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      margin: 3rem 0;
-    }
-
-    .socials a {
+    .download-btn {
+      display: inline-block;
+      background: white;
+      color: #0b1c48;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
       text-decoration: none;
-      background-color: #0b1c48;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 30px;
+      font-weight: 600;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .download-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .press-contact-card {
+      background: white;
+      color: #0b1c48;
+      padding: 2.5rem;
+      border-radius: 15px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .contact-header {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #1a4d91;
+    }
+
+    .contact-header h3 {
+      font-size: 1.8rem;
+      color: #0b1c48;
+    }
+
+    .contact-header p {
+      color: #1a4d91;
+      font-weight: 600;
+    }
+
+    .contact-info {
+      margin-top: 1.5rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+    }
+
+    .contact-item svg {
+      width: 24px;
+      height: 24px;
+      fill: #1a4d91;
+    }
+
+    /* APPARITIONS PRESSE */
+    .press-appearances {
+      max-width: 1200px;
+      margin: 5rem auto;
+      padding: 0 2rem;
+    }
+
+    .press-appearances h2 {
+      font-size: 2.5rem;
+      color: #0b1c48;
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+
+    .press-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .press-card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .press-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 40px rgba(11, 28, 72, 0.2);
+    }
+
+    .press-card-header {
+      background: #f5f7fa;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .press-logo {
+      max-width: 150px;
+      height: 60px;
+      object-fit: contain;
+    }
+
+    .press-card-body {
+      padding: 2rem;
+    }
+
+    .press-card-body h3 {
+      font-size: 1.3rem;
+      color: #0b1c48;
+      margin-bottom: 1rem;
+    }
+
+    .press-card-body p {
+      color: #666;
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    .press-link {
+      display: inline-block;
+      color: #1a4d91;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .press-link:hover {
+      color: #0b1c48;
+    }
+
+    .podcast-embed {
+      margin-top: 1rem;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    /* GALERIE MEDIA */
+    .media-gallery {
+      background: #f5f7fa;
+      padding: 5rem 2rem;
+    }
+
+    .media-gallery-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .media-gallery h2 {
+      font-size: 2.5rem;
+      color: #0b1c48;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .gallery-item {
+      position: relative;
+      height: 350px;
+      border-radius: 12px;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.05);
+    }
+
+    .gallery-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, transparent 50%, rgba(11, 28, 72, 0.8) 100%);
       transition: background 0.3s;
     }
 
-    .socials a:hover {
-      background-color: #1a4d91;
+    .gallery-item:hover::before {
+      background: linear-gradient(to bottom, transparent 30%, rgba(11, 28, 72, 0.9) 100%);
+    }
+
+    .gallery-label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1.5rem;
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      z-index: 2;
+    }
+
+    /* RESEAUX SOCIAUX */
+    .social-section {
+      max-width: 1200px;
+      margin: 5rem auto;
+      padding: 0 2rem;
+      text-align: center;
+    }
+
+    .social-section h2 {
+      font-size: 2.5rem;
+      color: #0b1c48;
+      margin-bottom: 1rem;
+    }
+
+    .social-section p {
+      font-size: 1.1rem;
+      color: #666;
+      margin-bottom: 2.5rem;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .social-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      background: #0b1c48;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .social-btn:hover {
+      background: #1a4d91;
+      transform: translateY(-3px);
+    }
+
+    .social-btn svg {
+      width: 24px;
+      height: 24px;
+      fill: white;
     }
 
     /* FOOTER */
-    footer {
-      text-align: center;
-      padding: 2rem;
+    .footer {
       background-color: #0b1c48;
       color: white;
-      margin-top: 2rem;
+      padding: 3rem 1rem 1rem;
     }
-    .footer {
-  background-color: #0b1c48;
-  color: white;
-  padding: 3rem 1rem 1rem;
-  font-family: sans-serif;
-}
 
-.footer-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
-  margin: auto;
-}
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
 
-.footer-logo {
-  width: 120px;
-}
+    .footer-logo {
+      width: 120px;
+    }
 
-.search-form {
-  display: flex;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
-}
+    .search-form {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
 
-.search-form input {
-  flex: 1;
-  padding: 0.5rem;
-  border-radius: 5px;
-  border: none;
-}
+    .search-form input {
+      flex: 1;
+      padding: 0.5rem;
+      border-radius: 5px;
+      border: none;
+    }
 
-.search-form button {
-  background-color: white;
-  border: none;
-  color: #0b1c48;
-  padding: 0.5rem 0.8rem;
-  border-radius: 5px;
-  cursor: pointer;
-}
+    .search-form button {
+      background-color: white;
+      border: none;
+      color: #0b1c48;
+      padding: 0.5rem 0.8rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
 
-.footer-column h3 {
-  margin-bottom: 0.5rem;
-  font-size: 1.1rem;
-}
+    .footer-column h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
 
-.social-icons a {
-  color: white;
-  text-decoration: none;
-  display: inline-block;
-  margin-bottom: 0.3rem;
-}
+    .social-icons a {
+      color: white;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 0.3rem;
+    }
 
-.footer-links {
-  list-style: none;
-  padding: 0;
-}
+    .footer-links {
+      list-style: none;
+      padding: 0;
+    }
 
-.footer-links li a {
-  color: white;
-  text-decoration: none;
-  display: block;
-  margin-bottom: 0.3rem;
-}
+    .footer-links li a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
 
-.footer-links li a:hover,
-.social-icons a:hover {
-  text-decoration: underline;
-}
+    .footer-links li a:hover,
+    .social-icons a:hover {
+      text-decoration: underline;
+    }
 
-.footer-bottom {
-  text-align: center;
-  margin-top: 2rem;
-  border-top: 1px solid #ccc;
-  padding-top: 1rem;
-  font-size: 0.9rem;
-  color: #ddd;
-}
-.page-banner {
-  position: relative;
-  height: 40vh; /* hauteur réduite */
-  background-image: url('equipage.jpeg'); /* remplace par le chemin de ton image */
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-}
+    .footer-bottom {
+      text-align: center;
+      margin-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      padding-top: 1rem;
+      font-size: 0.9rem;
+      color: #ddd;
+    }
 
-.page-banner::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-color: rgba(11, 28, 72, 0.5); /* voile sombre bleu marine */
-  z-index: 1;
-}
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .banner-text h1 {
+        font-size: 2.5rem;
+      }
 
-.banner-text {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-}
+      .press-kit-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
 
-.banner-text h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
-}
-
-
-.bureau {
-  padding: 4rem 2rem;
-  background-color: #f5f7fa;
-  text-align: center;
-}
-
-.bureau h2 {
-  font-size: 2.5rem;
-  color: #0b1c48;
-  margin-bottom: 2rem;
-}
-.bureau2 {
-  padding: 4rem 2rem;
-  background-color: #FFFFFF;
-  text-align: center;
-}
-
-
-.membres {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-.membres img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.membres img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 10px rgba(11, 28, 72, 0.3);
-}
-
-.profil-cache {
-  display: none;
-  margin-top: 3rem;
-  background-color: #fff;
-  border-top: 4px solid #0b1c48;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.profil-visible {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-.profil-visible img {
-  width: 200px;
-  border-radius: 12px;
-}
-
-.profil-texte {
-  flex: 1;
-  text-align: left;
-}
-
-.profil-texte h3 {
-  margin: 0;
-  font-size: 1.5rem;
-  color: #0b1c48;
-}
-
-.profil-texte p {
-  margin: 0.5rem 0;
-}
-
-.profil-texte a {
-  display: block;
-  color: #1a4d91;
-  text-decoration: none;
-  margin-top: 0.5rem;
-}
-
-.profil-texte a:hover {
-  text-decoration: underline;
-}
-
-
-
-  a.press-band {
-  display: block;
-  position: relative;
-  width: 100%;
-  height: 60vh;
-  background-size: cover;
-  background-position: center;
-  overflow: hidden;
-  transition: all 0.5s ease-in-out;
-  text-decoration: none;
-  color: white;
-}
-
-a.press-band::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  transition: background-color 0.3s ease;
-  z-index: 1;
-}
-
-a.press-band:hover::before {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-a.press-band:hover {
-  transform: scale(1.02);
-  z-index: 10;
-}
-
-.press-band-content {
-  position: relative;
-  z-index: 2;
-  font-size: 2rem;
-  font-weight: bold;
-  text-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-}
-
-
-    @media (hover: hover) {
-      .press-band:hover {
-        height: 100vh;
+      .intro-section h2,
+      .press-appearances h2,
+      .media-gallery h2,
+      .social-section h2 {
+        font-size: 2rem;
       }
     }
-
-    @media (max-width: 768px) {
-      .section {
-        flex-direction: column !important;
-        text-align: center;
-      }}
-
-
   </style>
 </head>
 <body>
@@ -450,7 +576,6 @@ a.press-band:hover {
   <nav>
     <a href="index.htm"><img src="logo.jpg" alt="Logo Hydrospeed" class="logo"></a>
     <div class="hamburger" onclick="toggleMenu()">☰</div>
-
     <div class="nav-links">
       <a href="equipe.htm">Équipe</a>
       <a href="projet.htm">Projet</a>
@@ -462,145 +587,239 @@ a.press-band:hover {
     </div>
   </nav>
 
-  <!-- CONTENU -->
-
-
-<header class="page-banner">
-  <div class="banner-text">
-    <h1>Média</h1>
-  </div>
-</header>
-
-
-
-  <section id="presse" style="background-color: #FFFFFF; padding: 4rem 2rem; color: #0b1c48;">
-  <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
-    <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Espace Presse</h2>
-
-
-    <h3 style="font-size: 1.5rem; margin-top: 3rem;">Dossier de presse</h3>
-    <p style="margin: 1rem auto; max-width: 800px;">
-      Retrouvez notre dossier de presse complet, comprenant la présentation de l’équipe, du prototype, des partenaires et des enjeux du concours.
-    </p>
-    <a href="dossier_presse_Hydrospeed.pdf" download style="display: inline-block; margin-top: 1rem; padding: 0.8rem 1.5rem; background-color: #0b1c48; color: white; text-decoration: none; border-radius: 8px;">Accéder au le dossier</a>
-
-    <h3 style="font-size: 1.5rem; margin-top: 3rem;">Contact presse</h3>
-    <p style="margin: 0.5rem 0;"><strong>Responsable communication :</strong> Thomas Youn Nagles</p>
-    <p style="margin: 0.5rem 0;">📞 07 83 40 42 84</p>
-    <p style="margin: 0.5rem 0;">📧 <a href="mailto:hydrospeedteam@supmaritime.fr">hydrospeedteam@supmaritime.fr</a></p>
-
-
-
-    <h2 style="font-size: 2.5rem; margin-bottom: 1rem;"></h2>
-  </div>
-</section>
-
-
-
-
-
-  <a href="https://supmaritimefr-my.sharepoint.com/:f:/g/personal/yann_kerherve_supmaritime_fr/EvnHzgW5hi9EseLxlI00iTsBwh1uQON9R-Pse5C0FeYqrg" class="press-band" style="background-image: url('stand.png');">
-    <div class="press-band-content">Logo
+  <!-- HERO BANNER -->
+  <header class="page-banner">
+    <div class="banner-text">
+      <h1>Espace Média</h1>
+      <p>Ressources, photos et apparitions presse</p>
     </div>
-</a>
-  <a href="https://supmaritimefr-my.sharepoint.com/:f:/g/personal/yann_kerherve_supmaritime_fr/EvnHzgW5hi9EseLxlI00iTsBwh1uQON9R-Pse5C0FeYqrg" class="press-band" style="background-image: url('design.jpeg');">
-    <div class="press-band-content">Design</div></a>
-  <a href="https://supmaritimefr-my.sharepoint.com/:f:/g/personal/yann_kerherve_supmaritime_fr/EvnHzgW5hi9EseLxlI00iTsBwh1uQON9R-Pse5C0FeYqrg" class="press-band" style="background-image: url('maquette.jpeg');">
-    <div class="press-band-content">Maquette</div></a>
-  <a href="https://supmaritimefr-my.sharepoint.com/:f:/g/personal/yann_kerherve_supmaritime_fr/EvnHzgW5hi9EseLxlI00iTsBwh1uQON9R-Pse5C0FeYqrg" class="press-band" style="background-image: url('chantier.jpeg');">
-    <div class="press-band-content">Chantier</div></a>
-  <a href="https://supmaritimefr-my.sharepoint.com/:f:/g/personal/yann_kerherve_supmaritime_fr/EvnHzgW5hi9EseLxlI00iTsBwh1uQON9R-Pse5C0FeYqrg" class="press-band" style="background-image: url('essai.jpeg');">
-    <div class="press-band-content">Essais</div></a>
+  </header>
 
+  <!-- INTRO SECTION -->
+  <section class="intro-section">
+    <h2>Découvrez nos ressources média</h2>
+    <p style="max-width: 800px; margin: 0 auto; color: #666; font-size: 1.1rem;">
+      Retrouvez l'ensemble de nos ressources : dossier de presse complet, apparitions médiatiques,
+      galerie photo et vidéo, ainsi que nos réseaux sociaux pour suivre l'aventure en temps réel.
+    </p>
 
+    <div class="intro-grid">
+      <div class="intro-card">
+        <h3>📄 Dossier de presse</h3>
+        <p>Présentation complète de l'équipe, du prototype et des enjeux</p>
+      </div>
+      <div class="intro-card">
+        <h3>📰 Apparitions presse</h3>
+        <p>Nos interviews, articles et podcasts dans les médias</p>
+      </div>
+      <div class="intro-card">
+        <h3>📸 Galerie média</h3>
+        <p>Photos, vidéos et visuels haute résolution</p>
+      </div>
+      <div class="intro-card">
+        <h3>🔗 Réseaux sociaux</h3>
+        <p>Suivez notre aventure au quotidien</p>
+      </div>
+    </div>
+  </section>
 
+  <!-- DOSSIER DE PRESSE -->
+  <section class="press-kit-section">
+    <div class="press-kit-container">
+      <div class="press-kit-left">
+        <h2>Dossier de presse</h2>
+        <div class="download-card">
+          <h3>Kit média complet</h3>
+          <p>Téléchargez notre dossier de presse comprenant la présentation de l'équipe, du prototype, de nos partenaires et des enjeux de l'Hydrocontest.</p>
+          <a href="dossier_presse_Hydrospeed.pdf" download class="download-btn">
+            Télécharger le dossier
+          </a>
+        </div>
+      </div>
 
+      <div class="press-kit-right">
+        <div class="press-contact-card">
+          <div class="contact-header">
+            <img src="antoine.jpg" alt="Antoine Vaudry" class="contact-avatar" onerror="this.style.display='none'">
+            <div>
+              <h3>Contact presse</h3>
+              <p>Responsable communication</p>
+            </div>
+          </div>
+          <div class="contact-info">
+            <div class="contact-item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+              <span><strong>Antoine Vaudry</strong></span>
+            </div>
+            <div class="contact-item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              <span>+33 7 88 73 94 87</span>
+            </div>
+            <div class="contact-item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              <a href="mailto:hydrospeedteam@supmaritime.fr" style="color: #0b1c48; text-decoration: none;">hydrospeedteam@supmaritime.fr</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <section id="reseaux" style="background-color: #f5f7fa; padding: 4rem 2rem; color: #0b1c48;">
-  <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
-    <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Réseaux</h2>
-    <h3 style="font-size: 1.5rem; margin-top: 3rem;">Nous suivre</h3>
-    <p>Pour des visuels, vidéos, et actus en direct :</p>
-    <div style="margin-top: 1rem;">
-<div class="socials">
-    <a href="https://instagram.com/hydrospeed_team/" target="_blank">Instagram</a>
-    <a href="https://www.linkedin.com/in/hydrospeed-team/" target="_blank">LinkedIn</a>
-  </div>
+  <!-- APPARITIONS PRESSE -->
+  <section class="press-appearances">
+    <h2>Apparitions dans la presse</h2>
+    <div class="press-grid">
+
+      <!-- Podcast Transpod -->
+      <div class="press-card">
+        <div class="press-card-header">
+          <img src="https://transpod.fr/content/images/2026/02/LOGO_TRANSPOD.pdf-2-removebg-preview.png" alt="Transpod" class="press-logo" onerror="this.parentElement.innerHTML='<h3 style=\'margin:0\'>Transpod</h3>'">
+        </div>
+        <div class="press-card-body">
+          <h3>Podcast Transpod</h3>
+          <p>Interview sur la transition énergétique et notre projet Hydrospeed Team</p>
+          <div class="podcast-embed">
+            <iframe title="Embed Player" width="100%" height="188px" src="https://embed.acast.com/64fdd5f6b206be00111cc729/68eb51c6f513ad2b81bdcdec" scrolling="no" frameBorder="0" style="border:none;overflow:hidden;"></iframe>
+          </div>
+          <a href="https://transpod.fr/transpod-linterview-sur-la-transition-energetique-de-lensm/" target="_blank" class="press-link">
+            Écouter l'épisode →
+          </a>
+        </div>
+      </div>
+
+      <!-- Jeune Marine -->
+      <div class="press-card">
+        <div class="press-card-header">
+          <img src="https://jeunemarine.fr/wp-content/uploads/2025/01/logo-jeune-marine-2025-noir.svg" alt="Jeune Marine" class="press-logo" onerror="this.parentElement.innerHTML='<h3 style=\'margin:0\'>Jeune Marine</h3>'">
+        </div>
+        <div class="press-card-body">
+          <h3>Portrait Hydrocontest</h3>
+          <p>Découvrez notre innovation en catégorie Design et notre approche du projet</p>
+          <a href="https://jeunemarine.fr/2026/03/portrait-hydrocontest-by-ensm-hydrospeed-team-linnovation-en-categorie-design/" target="_blank" class="press-link">
+            Lire l'article →
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GALERIE MEDIA -->
+  <section class="media-gallery">
+    <div class="media-gallery-container">
+      <h2>Galerie photos & vidéos</h2>
+      <p style="text-align: center; color: #666; margin-bottom: 2rem; font-size: 1.1rem;">
+        Accédez à l'ensemble de nos visuels haute résolution
+      </p>
+
+      <div class="gallery-grid">
+        <a href="https://supmaritimefr-my.sharepoint.com/:f:/g/personal/yann_kerherve_supmaritime_fr/EvnHzgW5hi9EseLxlI00iTsBwh1uQON9R-Pse5C0FeYqrg"
+           class="gallery-item"
+           style="background-image: url('stand.png');"
+           target="_blank">
+          <div class="gallery-label">Logo</div>
+        </a>
+
+        <a href="https://supmaritimefr-my.sharepoint.com/:f:/g/personal/yann_kerherve_supmaritime_fr/EvnHzgW5hi9EseLxlI00iTsBwh1uQON9R-Pse5C0FeYqrg"
+           class="gallery-item"
+           style="background-image: url('design.jpeg');"
+           target="_blank">
+          <div class="gallery-label">Design</div>
+        </a>
+
+        <a href="https://supmaritimefr-my.sharepoint.com/:f:/g/personal/yann_kerherve_supmaritime_fr/EvnHzgW5hi9EseLxlI00iTsBwh1uQON9R-Pse5C0FeYqrg"
+           class="gallery-item"
+           style="background-image: url('maquette.jpeg');"
+           target="_blank">
+          <div class="gallery-label">Maquette</div>
+        </a>
+
+        <a href="https://supmaritimefr-my.sharepoint.com/:f:/g/personal/yann_kerherve_supmaritime_fr/EvnHzgW5hi9EseLxlI00iTsBwh1uQON9R-Pse5C0FeYqrg"
+           class="gallery-item"
+           style="background-image: url('chantier.jpeg');"
+           target="_blank">
+          <div class="gallery-label">Chantier</div>
+        </a>
+
+        <a href="https://supmaritimefr-my.sharepoint.com/:f:/g/personal/yann_kerherve_supmaritime_fr/EvnHzgW5hi9EseLxlI00iTsBwh1uQON9R-Pse5C0FeYqrg"
+           class="gallery-item"
+           style="background-image: url('essai.jpeg');"
+           target="_blank">
+          <div class="gallery-label">Essais</div>
+        </a>
+
+        <a href="https://supmaritimefr-my.sharepoint.com/:f:/g/personal/yann_kerherve_supmaritime_fr/EvnHzgW5hi9EseLxlI00iTsBwh1uQON9R-Pse5C0FeYqrg"
+           class="gallery-item"
+           style="background-image: url('equipage.jpeg');"
+           target="_blank">
+          <div class="gallery-label">Équipage</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEAUX SOCIAUX -->
+  <section class="social-section">
+    <h2>Suivez-nous sur les réseaux</h2>
+    <p>Découvrez nos actualités, coulisses et moments forts en temps réel</p>
+
+    <div class="social-links">
+      <a href="https://instagram.com/hydrospeed_team/" target="_blank" class="social-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
+        Instagram
+      </a>
+      <a href="https://www.linkedin.com/in/hydrospeed-team/" target="_blank" class="social-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+        LinkedIn
       </a>
     </div>
-  </div>
-</section>
-
-
-
-
+  </section>
 
   <!-- FOOTER -->
-<footer class="footer">
-  <div class="footer-container">
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <img src="logoblanc.png" alt="Hydrospeed Team Logo" class="footer-logo">
+      </div>
 
-    <!-- Colonne 1 : Logo -->
-    <div class="footer-column">
-      <img src="logoblanc.png" alt="Hydrospeed Team Logo" class="footer-logo">
-    </div>
+      <div class="footer-column">
+        <h3>Rechercher</h3>
+        <form class="search-form">
+          <input type="text" placeholder="Recherche..." name="search">
+          <button type="submit">🔍</button>
+        </form>
+      </div>
 
-    <!-- Colonne 2 : Recherche -->
-    <div class="footer-column">
-      <h3>Rechercher</h3>
-      <form class="search-form">
-        <input type="text" placeholder="Recherche..." name="search">
-        <button type="submit">🔍</button>
-      </form>
-    </div>
+      <div class="footer-column">
+        <h3>Suivez-nous</h3>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/hydrospeed_team/" target="_blank">📷 Instagram</a><br>
+          <a href="https://www.linkedin.com/in/hydrospeed-team/" target="_blank">🔗 LinkedIn</a><br>
+        </div>
+      </div>
 
-    <!-- Colonne 3 : Réseaux sociaux -->
-    <div class="footer-column">
-      <h3>Suivez-nous</h3>
-      <div class="social-icons">
-        <a href="https://www.instagram.com/hydrospeed_team/" target="_blank">📷 Instagram</a><br>
-        <a href="https://www.linkedin.com/in/hydrospeed-team/" target="_blank">🔗 LinkedIn</a><br>
+      <div class="footer-column">
+        <h3>Navigation</h3>
+        <ul class="footer-links">
+          <li><a href="equipe.htm">Équipe</a></li>
+          <li><a href="projet.htm">Projet</a></li>
+          <li><a href="actualites.htm">Actualités</a></li>
+          <li><a href="media.htm">Média</a></li>
+          <li><a href="contact.htm">Contact</a></li>
+        </ul>
       </div>
     </div>
 
-    <!-- Colonne 4 : Navigation -->
-    <div class="footer-column">
-      <h3>Navigation</h3>
-      <ul class="footer-links">
-        <li><a href="#equipe">Équipe</a></li>
-        <li><a href="#projet">Projet</a></li>
-        <li><a href="#actus">Actualités</a></li>
-        <li><a href="#media">Média</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Hydrospeed Team – ENSM Marseille. Tous droits réservés.</p>
     </div>
+  </footer>
 
-  </div>
-
-  <div class="footer-bottom">
-    <p>&copy; 2025 Hydrospeed Team – ENSM Marseille. Tous droits réservés.</p>
-  </div>
-</footer>
   <script>
-    const bands = document.querySelectorAll('.band');
-
-    bands.forEach(band => {
-      band.addEventListener('mouseenter', () => {
-        band.classList.add('fullscreen');
-        document.body.style.overflow = 'hidden';
-      });
-
-      band.addEventListener('mouseleave', () => {
-        band.classList.remove('fullscreen');
-        document.body.style.overflow = 'scroll';
-      });
-    });
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    }
   </script>
-  <script>
-  function toggleMenu() {
-    document.querySelector('.nav-links').classList.toggle('active');
-  }
-</script>
 
 </body>
 </html>
-
